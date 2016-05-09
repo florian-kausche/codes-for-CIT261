@@ -6,7 +6,7 @@
 package darkdungeon;
 
 /**
- *j
+ *just
  * @author gregg here we go
  * test
  */
