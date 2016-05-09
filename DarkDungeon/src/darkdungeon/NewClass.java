@@ -8,6 +8,7 @@ package darkdungeon;
 /**
  *
  * @author gregg and bill
+ * I want to go home
  */
 public class NewClass {
     
