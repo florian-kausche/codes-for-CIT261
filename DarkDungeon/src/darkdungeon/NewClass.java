@@ -7,7 +7,7 @@ package darkdungeon;
 
 /**
  *
- * @author gregg
+ * @author gregg and bill
  */
 public class NewClass {
     
