@@ -26,7 +26,7 @@ public class Game {
     
     //test the items class - Greg
     System.out.println("This is a test in for the item class:");
-    Items items = new Items("Potion of Life","Potion",0,35,3);
+    Item items = new Item("Potion of Life","Potion",0,35,3);
     String itemInfo = items.toString();
     System.out.println(itemInfo+"\n");
     }
