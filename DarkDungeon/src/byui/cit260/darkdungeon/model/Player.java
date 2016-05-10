@@ -1,7 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *  Dark Dungeon game
  */
 package byui.cit260.darkdungeon.model;
 
@@ -9,9 +7,10 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
- * @author gregg
+ * @authors Greg Kenar, William Murray, Florian Kausche
+ * CIT 260  First Assignment
  */
+
 public class Player implements Serializable {
     private String name;
     private double bestTime;
