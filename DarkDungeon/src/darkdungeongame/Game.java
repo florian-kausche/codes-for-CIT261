@@ -48,5 +48,16 @@ public class Game {
     fight.setIsAlive(Boolean.FALSE);
     String battleInfo = fight.toString();
     System.out.println(battleInfo+"\n");
+    
+    //test scene class - Bill
+    System.out.println("This is a test in for the scene class:");
+    Scene roomFormat = new Scene();
+    roomFormat.setDrescription("Chapel");
+    roomFormat.setTrapboolan(Boolean.TRUE);
+    roomFormat.setChestboolan(Boolean.TRUE);
+    roomFormat.setRandomMonsterEncounter(Boolean.TRUE);
+    String sceneInfo = roomFormat.toString();
+    System.out.println(sceneInfo+"\n");
+    
     }
 }
