@@ -29,5 +29,16 @@ public class Game {
     Item items = new Item("Potion of Life","Potion",0,35,3);
     String itemInfo = items.toString();
     System.out.println(itemInfo+"\n");
+    
+    //test the monster class - Bill
+    System.out.println("This is a test in for the monster class:");    
+    Monster monsterStat = new Monster();
+    monsterStat.setMonsterName("Wight");
+    monsterStat.setHealth(50);
+    monsterStat.setMinAttackDamage(5);
+    monsterStat.setMaxAttackDamage(50);
+    monsterStat.setAbilityDamage(8);
+    String monsterInfo = monsterStat.toString();
+    System.out.println(monsterStat+"\n");
     }
 }
