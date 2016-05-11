@@ -10,7 +10,7 @@ import byui.cit260.darkdungeon.model.*;
  */
 public class Game {
     public static void main(String[] args) {
-    //test the player class - Everyone
+    //test the player class - Greg and Bill.
     System.out.println("This is a test in for the player class:");    
     Player playerOne = new Player();
     playerOne.setName("Goku");
@@ -20,7 +20,7 @@ public class Game {
     
     //test the character class - Greg
     System.out.println("This is a test in for the character class:");
-    Characters warrior = new Characters("Warrior",100,10,50,10,30,50,50);
+    CharacterSelection warrior = new CharacterSelection("Warrior",100,10,50,10,30,50,50);
     String characterInfo = warrior.toString();
     System.out.println(characterInfo+"\n");
     

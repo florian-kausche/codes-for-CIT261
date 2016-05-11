@@ -11,7 +11,7 @@ import java.util.Objects;
  * CIT 260  First Assignment
  */
 
-public class Characters implements Serializable {
+public class CharacterSelection implements Serializable {
     private String characterClass;
     private int health;
     private int minAttackDamage;
@@ -21,10 +21,10 @@ public class Characters implements Serializable {
     private int abilityDamage;
     private int elementalDamage;
 
-    public Characters() {
+    public CharacterSelection() {
     }
 
-    public Characters(String characterClass, int health, int minAttackDamage, int maxAttackDamage, int defenseAmount, int manaAmount, int abilityDamage, int elementalDamage) {
+    public CharacterSelection(String characterClass, int health, int minAttackDamage, int maxAttackDamage, int defenseAmount, int manaAmount, int abilityDamage, int elementalDamage) {
         this.characterClass = characterClass;
         this.health = health;
         this.minAttackDamage = minAttackDamage;
@@ -131,7 +131,7 @@ public class Characters implements Serializable {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Characters other = (Characters) obj;
+        final CharacterSelection other = (CharacterSelection) obj;
         if (this.health != other.health) {
             return false;
         }
