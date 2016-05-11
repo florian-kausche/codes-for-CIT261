@@ -16,8 +16,8 @@ public class Scene implements Serializable {
     
     //class instance variables
     private String drescription;
-    private Boolean trapboolan;
-    private Boolean chestboolan;
+    private Boolean trapboolean;
+    private Boolean chestboolean;
     private Boolean randomMonsterEncounter;
 
     public Scene() {
@@ -32,19 +32,19 @@ public class Scene implements Serializable {
     }
 
     public Boolean getTrapboolan() {
-        return trapboolan;
+        return trapboolean;
     }
 
     public void setTrapboolan(Boolean trapboolan) {
-        this.trapboolan = trapboolan;
+        this.trapboolean = trapboolan;
     }
 
     public Boolean getChestboolan() {
-        return chestboolan;
+        return chestboolean;
     }
 
     public void setChestboolan(Boolean chestboolan) {
-        this.chestboolan = chestboolan;
+        this.chestboolean = chestboolan;
     }
 
     public Boolean getRandomMonsterEncounter() {
@@ -59,8 +59,8 @@ public class Scene implements Serializable {
     public int hashCode() {
         int hash = 3;
         hash = 19 * hash + Objects.hashCode(this.drescription);
-        hash = 19 * hash + Objects.hashCode(this.trapboolan);
-        hash = 19 * hash + Objects.hashCode(this.chestboolan);
+        hash = 19 * hash + Objects.hashCode(this.trapboolean);
+        hash = 19 * hash + Objects.hashCode(this.chestboolean);
         hash = 19 * hash + Objects.hashCode(this.randomMonsterEncounter);
         return hash;
     }
@@ -80,10 +80,10 @@ public class Scene implements Serializable {
         if (!Objects.equals(this.drescription, other.drescription)) {
             return false;
         }
-        if (!Objects.equals(this.trapboolan, other.trapboolan)) {
+        if (!Objects.equals(this.trapboolean, other.trapboolean)) {
             return false;
         }
-        if (!Objects.equals(this.chestboolan, other.chestboolan)) {
+        if (!Objects.equals(this.chestboolean, other.chestboolean)) {
             return false;
         }
         if (!Objects.equals(this.randomMonsterEncounter, other.randomMonsterEncounter)) {
@@ -94,7 +94,7 @@ public class Scene implements Serializable {
 
     @Override
     public String toString() {
-        return "Scene{" + "drescription=" + drescription + ", trapboolan=" + trapboolan + ", chestboolan=" + chestboolan + ", randomMonsterEncounter=" + randomMonsterEncounter + '}';
+        return "Scene{" + "drescription=" + drescription + ", trapboolan=" + trapboolean + ", chestboolan=" + chestboolean + ", randomMonsterEncounter=" + randomMonsterEncounter + '}';
     }
     
 }
