@@ -43,7 +43,7 @@ public class Game {
     System.out.println(monsterInfo+"\n");
     
     //test battle class - Bill
-    System.out.println("This is a test in for the monster class:");    
+    System.out.println("This is a test in for the battle class:");    
     Battle fight = new Battle();
     fight.setIsAlive(Boolean.FALSE);
     String battleInfo = fight.toString();
