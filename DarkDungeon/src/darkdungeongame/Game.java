@@ -41,5 +41,12 @@ public class Game {
     monsterStat.setAbilityDamage(8);
     String monsterInfo = monsterStat.toString();
     System.out.println(monsterInfo+"\n");
+    
+    //test battle class - Bill
+    System.out.println("This is a test in for the monster class:");    
+    Battle fight = new Battle();
+    fight.setIsAlive(Boolean.FALSE);
+    String battleInfo = fight.toString();
+    System.out.println(battleInfo+"\n");
     }
 }
