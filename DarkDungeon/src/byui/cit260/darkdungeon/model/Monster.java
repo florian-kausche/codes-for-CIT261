@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package darkdungeongame;
+package byui.cit260.darkdungeon.model;
 
 import java.io.Serializable;
 import java.util.Objects;

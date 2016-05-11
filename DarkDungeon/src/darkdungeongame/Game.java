@@ -2,6 +2,7 @@
  *  Dark Dungeon game
  */
 package darkdungeongame;
+import byui.cit260.darkdungeon.model.Monster;
 import byui.cit260.darkdungeon.model.*;
 
 /**
@@ -39,6 +40,6 @@ public class Game {
     monsterStat.setMaxAttackDamage(50);
     monsterStat.setAbilityDamage(8);
     String monsterInfo = monsterStat.toString();
-    System.out.println(monsterStat+"\n");
+    System.out.println(monsterInfo+"\n");
     }
 }
