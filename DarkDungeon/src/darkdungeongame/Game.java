@@ -59,5 +59,14 @@ public class Game {
     String sceneInfo = roomFormat.toString();
     System.out.println(sceneInfo+"\n");
     
+    //test Map class - Florian
+    System.out.println("This is a test in for the map class:");
+    Map Map = new Map();
+    Map.setlocationX(Boolean.TRUE);
+    Map.setlocationY(Boolean.TRUE);
+    String MapInfo = Map.toString();
+    System.out.println(MapInfo);
+    
+    
     }
 }
