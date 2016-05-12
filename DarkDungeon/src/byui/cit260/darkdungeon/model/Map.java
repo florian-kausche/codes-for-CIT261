@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author K
+ * @author Florian
  */
 public class Map implements Serializable{
     private Boolean locationX;
