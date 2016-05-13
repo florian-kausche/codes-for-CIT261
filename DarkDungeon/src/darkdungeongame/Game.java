@@ -61,10 +61,10 @@ public class Game {
     
     //test Map class - Florian
     System.out.println("This is a test in for the map class:");
-    Map Map = new Map();
-    Map.setlocationX(Boolean.TRUE);
-    Map.setlocationY(Boolean.TRUE);
-    String MapInfo = Map.toString();
+    Map map = new Map();
+    map.setlocationX(Boolean.TRUE);
+    map.setlocationY(Boolean.TRUE);
+    String MapInfo = map.toString();
     System.out.println(MapInfo);
     
     
