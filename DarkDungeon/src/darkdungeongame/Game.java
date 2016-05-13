@@ -53,8 +53,8 @@ public class Game {
     System.out.println("This is a test in for the scene class:");
     Scene roomFormat = new Scene();
     roomFormat.setDrescription("Chapel");
-    roomFormat.setTrapboolan(Boolean.TRUE);
-    roomFormat.setChestboolan(Boolean.TRUE);
+    roomFormat.setTrapboolean(Boolean.TRUE);
+    roomFormat.setChestboolean(Boolean.TRUE);
     roomFormat.setRandomMonsterEncounter(Boolean.TRUE);
     String sceneInfo = roomFormat.toString();
     System.out.println(sceneInfo+"\n");
@@ -62,10 +62,10 @@ public class Game {
     //test Map class - Florian
     System.out.println("This is a test in for the map class:");
     Map map = new Map();
-    map.setlocationX(Boolean.TRUE);
-    map.setlocationY(Boolean.TRUE);
-    String MapInfo = map.toString();
-    System.out.println(MapInfo);
+    map.setLocationX(Boolean.TRUE);
+    map.setLocationY(Boolean.TRUE);
+    String mapInfo = map.toString();
+    System.out.println(mapInfo);
     
     
     }

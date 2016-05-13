@@ -35,16 +35,16 @@ public class Scene implements Serializable {
         return trapboolean;
     }
 
-    public void setTrapboolan(Boolean trapboolan) {
-        this.trapboolean = trapboolan;
+    public void setTrapboolean(Boolean trapboolean) {
+        this.trapboolean = trapboolean;
     }
 
-    public Boolean getChestboolan() {
+    public Boolean getChestboolean() {
         return chestboolean;
     }
 
-    public void setChestboolan(Boolean chestboolan) {
-        this.chestboolean = chestboolan;
+    public void setChestboolean(Boolean chestboolean) {
+        this.chestboolean = chestboolean;
     }
 
     public Boolean getRandomMonsterEncounter() {
@@ -94,7 +94,7 @@ public class Scene implements Serializable {
 
     @Override
     public String toString() {
-        return "Scene{" + "drescription=" + drescription + ", trapboolan=" + trapboolean + ", chestboolan=" + chestboolean + ", randomMonsterEncounter=" + randomMonsterEncounter + '}';
+        return "Scene{" + "drescription=" + drescription + ", trapboolean=" + trapboolean + ", chestboolean=" + chestboolean + ", randomMonsterEncounter=" + randomMonsterEncounter + '}';
     }
     
 }

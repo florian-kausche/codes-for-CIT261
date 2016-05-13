@@ -10,7 +10,7 @@ import java.util.Objects;
 
 /**
  *
- * @author K
+ * @author Florian
  */
 public class Map implements Serializable{
     private Boolean locationX;
@@ -68,17 +68,4 @@ public class Map implements Serializable{
     public String toString() {
         return "Map{" + "locationX=" + locationX + ", locationY=" + locationY + '}';
     }
-
-    public void setlocationX() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setlocationX(Boolean TRUE) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    public void setlocationY(Boolean TRUE) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }
