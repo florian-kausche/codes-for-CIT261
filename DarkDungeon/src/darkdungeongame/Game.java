@@ -66,7 +66,16 @@ public class Game {
     map.setLocationY(Boolean.TRUE);
     String mapInfo = map.toString();
     System.out.println(mapInfo);
-    
+      //test Map class - Florian
+      System.out.println("This is a test in for the location class:");
+      Location location = new Location();
+      location.currentRoom("Dungeon");
+      location.currentX(2.5);
+      location.currentY(4.5);
+      String locationInfo = location.toString();
+      System.out.println(locationInfo);
+      
+      
     
     }
 }

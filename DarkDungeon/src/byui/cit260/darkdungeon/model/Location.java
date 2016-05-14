@@ -81,6 +81,18 @@ public class Location implements Serializable{
     public String toString() {
         return "Location{" + "currentRoom=" + currentRoom + ", currentX=" + currentX + ", currentY=" + currentY + '}';
     }
+
+    public void currentRoom(String dungeon) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void currentX(double d) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void currentY(double d) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     
