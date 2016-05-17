@@ -9,7 +9,7 @@ import byui.cit260.darkdungeon.model.*;
  * @authors Greg Kenar, William Murray, Florian Kausche
  * CIT 260  First Assignment
  */
-public class Game {
+public class DarkDungeonGame {
     public static void main(String[] args) {
     //test the player class - Greg and Bill.
     System.out.println("This is a test in for the player class:");    
