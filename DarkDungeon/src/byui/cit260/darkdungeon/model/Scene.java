@@ -15,7 +15,7 @@ import java.util.Objects;
 public class Scene implements Serializable {
     
     //class instance variables
-    private String drescription;
+    private String description;
     private Boolean trapboolean;
     private Boolean chestboolean;
     private Boolean randomMonsterEncounter;
@@ -23,12 +23,12 @@ public class Scene implements Serializable {
     public Scene() {
     }
 
-    public String getDrescription() {
-        return drescription;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDrescription(String drescription) {
-        this.drescription = drescription;
+    public void setDescription(String drescription) {
+        this.description = drescription;
     }
 
     public Boolean getTrapboolan() {
@@ -58,7 +58,7 @@ public class Scene implements Serializable {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 19 * hash + Objects.hashCode(this.drescription);
+        hash = 19 * hash + Objects.hashCode(this.description);
         hash = 19 * hash + Objects.hashCode(this.trapboolean);
         hash = 19 * hash + Objects.hashCode(this.chestboolean);
         hash = 19 * hash + Objects.hashCode(this.randomMonsterEncounter);
@@ -77,7 +77,7 @@ public class Scene implements Serializable {
             return false;
         }
         final Scene other = (Scene) obj;
-        if (!Objects.equals(this.drescription, other.drescription)) {
+        if (!Objects.equals(this.description, other.description)) {
             return false;
         }
         if (!Objects.equals(this.trapboolean, other.trapboolean)) {
@@ -94,7 +94,7 @@ public class Scene implements Serializable {
 
     @Override
     public String toString() {
-        return "Scene{" + "drescription=" + drescription + ", trapboolean=" + trapboolean + ", chestboolean=" + chestboolean + ", randomMonsterEncounter=" + randomMonsterEncounter + '}';
+        return "Scene{" + "description=" + description + ", trapboolean=" + trapboolean + ", chestboolean=" + chestboolean + ", randomMonsterEncounter=" + randomMonsterEncounter + '}';
     }
     
 }

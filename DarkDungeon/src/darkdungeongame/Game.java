@@ -52,7 +52,7 @@ public class Game {
     //test scene class - Bill
     System.out.println("This is a test in for the scene class:");
     Scene roomFormat = new Scene();
-    roomFormat.setDrescription("Chapel");
+    roomFormat.setDescription("Chapel");
     roomFormat.setTrapboolean(Boolean.TRUE);
     roomFormat.setChestboolean(Boolean.TRUE);
     roomFormat.setRandomMonsterEncounter(Boolean.TRUE);
@@ -65,15 +65,15 @@ public class Game {
     map.setLocationX(Boolean.TRUE);
     map.setLocationY(Boolean.TRUE);
     String mapInfo = map.toString();
-    System.out.println(mapInfo);
-      //test Map class - Florian
-      System.out.println("This is a test in for the location class:");
-      Location location = new Location();
-      location.currentRoom("Dungeon");
-      location.currentX(2.5);
-      location.currentY(4.5);
-      String locationInfo = location.toString();
-      System.out.println(locationInfo);
+    System.out.println(mapInfo+"\n");
+    //test Map class - Florian
+    System.out.println("This is a test in for the location class:");
+    Location location = new Location();
+    location.setCurrentRoom("Dungeon");
+    location.setCurrentX(2.5);
+    location.setCurrentY(4.5);
+    String locationInfo = location.toString();
+    System.out.println(locationInfo+"\n");
       
       
     
