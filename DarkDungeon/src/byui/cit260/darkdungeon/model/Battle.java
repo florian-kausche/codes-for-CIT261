@@ -76,18 +76,18 @@ public class Battle implements Serializable {
             else if (action.equals("a")) {
                 monster.defend(character);
             }
-            else if(input.equals("r")) {
+            else if(action.equals("r")) {
                 System.out.println("\tYou run away from the " + monster.getMonsterName() + "!");
-                System.exit(0);
+                break;
             }
             else {System.out.println("\tInvalid command!");
             }
-            if (monster.isAlive()) {
+            /*if (monster.isAlive()) {
                 character.defend(monster);
             }
             
             else {System.out.println("\tInvalid command!");
-            }
+            }*/
             System.out.println("(" + character.getStatus() + " / " + monster.getStatus() + ")");
         }
     }
