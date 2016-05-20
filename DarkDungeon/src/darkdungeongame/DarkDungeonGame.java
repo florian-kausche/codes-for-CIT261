@@ -24,10 +24,10 @@ public class DarkDungeonGame {
     System.out.println(playerInfo+"\n");
     
     //test the character class moved to CharacterSeelection class- Greg
-    //System.out.println("This is a test in for the character class:");
-    //CharacterSelection warrior = new CharacterSelection("Test Name","Warrior",100,10,50,10,30,50,50);
-    //String characterInfo = warrior.toString();
-    //System.out.println(characterInfo+"\n");
+    System.out.println("This is a test in for the character class:");
+    CharacterSelection warrior = new CharacterSelection("Test Name","Warrior",100,10,50,10,30,50,50);
+    String characterInfo = warrior.toString();
+    System.out.println(characterInfo+"\n");
     
     //test the items class - Greg
     System.out.println("This is a test in for the item class:");

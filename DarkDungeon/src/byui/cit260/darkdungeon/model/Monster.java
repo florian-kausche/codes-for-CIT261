@@ -151,7 +151,7 @@ public class Monster implements Serializable {
             health = (health > attackStrength) ? health - attackStrength : 0;
             System.out.println(character.getCharacterName()+ " hits "+getMonsterName()+" for "+attackStrength+" HP of damage \n");
             if (health == 0) {
-                System.out.println("\t" + character + " transforms the skull of " + getMonsterName()
+                System.out.println("\t" + character.getCharacterName() + " transforms the skull of " + getMonsterName()
                         + " into dust to never be seen again");
             }
         }

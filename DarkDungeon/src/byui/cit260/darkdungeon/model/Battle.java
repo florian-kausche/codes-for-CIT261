@@ -68,20 +68,24 @@ public class Battle implements Serializable {
                 + monster.getStatus() + ")");
         
         while (character.isAlive() && monster.isAlive()) {
-            System.out.print("Attack (a) \nHeal (h) \nRun (r) ");
+            System.out.print("Attack (a) \nHeal (h) \nRun (r) \n");
             String action = input.nextLine();
             if (action.equals("h")) {
                 character.heal();
-            } else {
+            } 
+            else if (action.equals("a")) {
                 monster.defend(character);
+            }
+            else if(input.equals("r")) {
+                System.out.println("\tYou run away from the " + monster.getMonsterName() + "!");
+                System.exit(0);
+            }
+            else {System.out.println("\tInvalid command!");
             }
             if (monster.isAlive()) {
                 character.defend(monster);
             }
-            else if(input.equals("r")) {
-                System.out.println("\tYou run away from the " + monster.getMonsterName() + "!");
-                System.exit(-1);
-            }
+            
             else {System.out.println("\tInvalid command!");
             }
             System.out.println("(" + character.getStatus() + " / " + monster.getStatus() + ")");
