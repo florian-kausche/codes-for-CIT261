@@ -12,6 +12,7 @@ import java.util.Objects;
  */
 
 public class CharacterSelection implements Serializable {
+    private String characterName;
     private String characterClass;
     private int health;
     private int minAttackDamage;
@@ -24,7 +25,8 @@ public class CharacterSelection implements Serializable {
     public CharacterSelection() {
     }
 
-    public CharacterSelection(String characterClass, int health, int minAttackDamage, int maxAttackDamage, int defenseAmount, int manaAmount, int abilityDamage, int elementalDamage) {
+    public CharacterSelection(String characterName, String characterClass, int health, int minAttackDamage, int maxAttackDamage, int defenseAmount, int manaAmount, int abilityDamage, int elementalDamage) {
+        this.characterName = characterName;
         this.characterClass = characterClass;
         this.health = health;
         this.minAttackDamage = minAttackDamage;
@@ -33,6 +35,14 @@ public class CharacterSelection implements Serializable {
         this.manaAmount = manaAmount;
         this.abilityDamage = abilityDamage;
         this.elementalDamage = elementalDamage;
+    }
+
+    public String getCharacterName() {
+        return characterName;
+    }
+
+    public void setCharacterName(String characterName) {
+        this.characterName = characterName;
     }
     
     public String getCharacterClass() {
@@ -102,6 +112,7 @@ public class CharacterSelection implements Serializable {
     @Override
     public int hashCode() {
         int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.characterName);
         hash = 37 * hash + Objects.hashCode(this.characterClass);
         hash = 37 * hash + this.health;
         hash = 37 * hash + this.minAttackDamage;
@@ -115,7 +126,7 @@ public class CharacterSelection implements Serializable {
 
     @Override
     public String toString() {
-        return "Character{" + "characterClass=" + characterClass + ", health=" + health + ", minAttackDamage=" + minAttackDamage + ", maxAttackDamage=" + maxAttackDamage + ", defenseAmount=" + defenseAmount + ", manaAmount=" + manaAmount + ", abilityDamage=" + abilityDamage + ", elementalDamage=" + elementalDamage + '}';
+        return "Character{" +  "characterName=" + characterName +  "characterClass=" + characterClass + ", health=" + health + ", minAttackDamage=" + minAttackDamage + ", maxAttackDamage=" + maxAttackDamage + ", defenseAmount=" + defenseAmount + ", manaAmount=" + manaAmount + ", abilityDamage=" + abilityDamage + ", elementalDamage=" + elementalDamage + '}';
     }
     
     
@@ -156,12 +167,49 @@ public class CharacterSelection implements Serializable {
         if (!Objects.equals(this.characterClass, other.characterClass)) {
             return false;
         }
+        if (!Objects.equals(this.characterName, other.characterName)) {
+            return false;
+        }
         return true;
     }
+    public void heal() {
+        int numHealthPotions = 3;
+        int healthPotionHealAmount = 25;
+        if (numHealthPotions > 0) {
+            health = health + healthPotionHealAmount;
+            --numHealthPotions;
+            System.out.println(characterName+" drinks a healing potion.");
+            System.out.println(getStatus());
+        } else {
+            System.out.println("  You've exhausted your potion supply!");
+        }
+    }
+    public int attack() {
+        return Game.rand(minAttackDamage, maxAttackDamage);
+    }
     
+    public boolean isAlive() {
+        return health > 0;
+    }
     
-    
-    
-    
+    public String getStatus() {
+        return "Player HP: " + health;
+    }
+    public void defend(Monster monster) {
+        int attackStrength = monster.attack();
+        health = (health > attackStrength) ? health - attackStrength : 0;
+        System.out.println(monster.getMonsterName()+ " hits "+getCharacterName()+" for "+attackStrength+" HP of damage \n");
+        
+        if (health == 0) {
+            System.out.println("\t" + getCharacterName() + " has been defeated, try again next time");
+        }
+    }
+    public static CharacterSelection warriorCreate(String nameSet) {
+        return new CharacterSelection("The Might Warrior -","- Brave attacker of all that is evil",100,10,50,10,30,50,50);
+     }
+
+     public static CharacterSelection paladinCreate(String nameSet) {
+        return new CharacterSelection("The Might Paladin Defender -","- Brave defender of the people for all that is good.", 100,10,40,10,3,40,60);
+     }
 }
 

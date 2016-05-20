@@ -4,6 +4,9 @@
 package darkdungeongame;
 import byui.cit260.darkdungeon.model.Monster;
 import byui.cit260.darkdungeon.model.*;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * @authors Greg Kenar, William Murray, Florian Kausche
@@ -11,6 +14,7 @@ import byui.cit260.darkdungeon.model.*;
  */
 public class DarkDungeonGame {
     public static void main(String[] args) {
+    /*
     //test the player class - Greg and Bill.
     System.out.println("This is a test in for the player class:");    
     Player playerOne = new Player();
@@ -19,11 +23,11 @@ public class DarkDungeonGame {
     String playerInfo = playerOne.toString();
     System.out.println(playerInfo+"\n");
     
-    //test the character class - Greg
-    System.out.println("This is a test in for the character class:");
-    CharacterSelection warrior = new CharacterSelection("Warrior",100,10,50,10,30,50,50);
-    String characterInfo = warrior.toString();
-    System.out.println(characterInfo+"\n");
+    //test the character class moved to CharacterSeelection class- Greg
+    //System.out.println("This is a test in for the character class:");
+    //CharacterSelection warrior = new CharacterSelection("Test Name","Warrior",100,10,50,10,30,50,50);
+    //String characterInfo = warrior.toString();
+    //System.out.println(characterInfo+"\n");
     
     //test the items class - Greg
     System.out.println("This is a test in for the item class:");
@@ -33,6 +37,8 @@ public class DarkDungeonGame {
     
     //test the monster class - Bill
     System.out.println("This is a test in for the monster class:");    
+    
+    Monster wight = Monster.newMonsterInstance();
     Monster monsterStat = new Monster();
     monsterStat.setMonsterName("Wight");
     monsterStat.setHealth(50);
@@ -75,7 +81,17 @@ public class DarkDungeonGame {
     String locationInfo = location.toString();
     System.out.println(locationInfo+"\n");
       
-      
+    // test the random selector - Greg
+    System.out.println("This is a test for the Random in the Game Class:");
+    int numOne=0;
+    int numTwo=10;
+    
+    int answerRandom = Game.rand(numOne, numTwo);
+    System.out.println(answerRandom);
+    */
+    Game game = new Game();
+    game.enter();
     
     }
+    
 }

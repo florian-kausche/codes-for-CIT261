@@ -23,8 +23,18 @@ public class Monster implements Serializable {
 
     public Monster() {
     }
+
+    public Monster(String monsterName, int health, int minAttackDamage, int maxAttackDamage, int abilityDamage) {
+        this.monsterName = monsterName;
+        this.health = health;
+        this.minAttackDamage = minAttackDamage;
+        this.maxAttackDamage = maxAttackDamage;
+        this.abilityDamage = abilityDamage;
+    }
     
-    
+    public static Monster newMonsterInstance() {
+        return new Monster("Dragon",70,2,2,2);
+    }
     public String getMonsterName() {
         return monsterName;
     }
@@ -111,7 +121,25 @@ public class Monster implements Serializable {
         return "Monster{" + "monsterName=" + monsterName + ", health=" + health + ", minAttackDamage=" + minAttackDamage + ", maxAttackDamage=" + maxAttackDamage + ", abilityDamage=" + abilityDamage + '}';
     }
     
+    public int attack() {
+        return Game.rand(minAttackDamage, maxAttackDamage);
+    }
+    public boolean isAlive() {
+        return health > 0;
+    }
     
+    public String getStatus() {
+        return "Monster HP: " + health;
+    }
+    public void defend(CharacterSelection character) {
+        int attackStrength = character.attack();
+        health = (health > attackStrength) ? health - attackStrength : 0;
+        System.out.println(character.getCharacterName()+ " hits "+getMonsterName()+" for "+attackStrength+" HP of damage \n");
+        if (health == 0) {
+            System.out.println("\t" + character + " transforms the skull of " + getMonsterName()
+                    + " into dust to never be seen again");
+        }
+    }
     
     
 }

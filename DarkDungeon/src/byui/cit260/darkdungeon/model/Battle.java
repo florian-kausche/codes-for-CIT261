@@ -5,8 +5,10 @@
  */
 package byui.cit260.darkdungeon.model;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.Objects;
+import java.util.Scanner;
 
 /**
  *
@@ -58,4 +60,31 @@ public class Battle implements Serializable {
         return "Battle{" + "isAlive=" + isAlive + '}';
     }
     
+    public void battleStart(CharacterSelection character, Monster monster) {  
+        Monster.newMonsterInstance();
+        Scanner input = new Scanner(System.in);
+        System.out.println("You encounter a: " + monster.getMonsterName()+ "\n");
+        System.out.println("You intiate the Battle with " +monster.getMonsterName() + "(" + character.getStatus() + " / "
+                + monster.getStatus() + ")");
+        
+        while (character.isAlive() && monster.isAlive()) {
+            System.out.print("Attack (a) \nHeal (h) \nRun (r) ");
+            String action = input.nextLine();
+            if (action.equals("h")) {
+                character.heal();
+            } else {
+                monster.defend(character);
+            }
+            if (monster.isAlive()) {
+                character.defend(monster);
+            }
+            else if(input.equals("r")) {
+                System.out.println("\tYou run away from the " + monster.getMonsterName() + "!");
+                System.exit(-1);
+            }
+            else {System.out.println("\tInvalid command!");
+            }
+            System.out.println("(" + character.getStatus() + " / " + monster.getStatus() + ")");
+        }
+    }
 }
