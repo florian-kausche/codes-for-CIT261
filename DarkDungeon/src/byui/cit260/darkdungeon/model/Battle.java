@@ -60,10 +60,10 @@ public class Battle implements Serializable {
         return "Battle{" + "isAlive=" + isAlive + '}';
     }
     
-    public void battleStart(CharacterSelection character, Monster monster) {  
+    public void battleStart(Player player, CharacterSelection character, Monster monster) {  
         Monster.newMonsterInstance();
         Scanner input = new Scanner(System.in);
-        System.out.println("You encounter a: " + monster.getMonsterName()+ "\n");
+        System.out.println(player.getName() + " has encountered a " + monster.getMonsterName()+ "\n");
         System.out.println("You intiate the Battle with " +monster.getMonsterName() + "(" + character.getStatus() + " / "
                 + monster.getStatus() + ")");
         
@@ -82,12 +82,12 @@ public class Battle implements Serializable {
             }
             else {System.out.println("\tInvalid command!");
             }
-            /*if (monster.isAlive()) {
+            if (monster.isAlive()) {
                 character.defend(monster);
             }
             
             else {System.out.println("\tInvalid command!");
-            }*/
+            }
             System.out.println("(" + character.getStatus() + " / " + monster.getStatus() + ")");
         }
     }
