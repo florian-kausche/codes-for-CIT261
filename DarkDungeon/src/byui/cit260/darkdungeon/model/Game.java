@@ -43,8 +43,9 @@ public class Game {
         String name;
         boolean run = Boolean.TRUE;
         Player playerOne = new Player();
+        Item potion = new Item("A devine glow covers your body", 0,25,3);
         
-// Banner will go here
+        // Banner will go here
 
 
         // Back story will go here
@@ -85,14 +86,14 @@ public class Game {
             warrior = CharacterSelection.warriorCreate(name);
             System.out.println("You have chosen a " + warrior.getCharacterName() +" "+ warrior.getCharacterClass());
             monster = Monster.newMonsterInstance();
-            game.battleStart(playerOne, warrior, monster);
+            game.battleStart(playerOne, potion, warrior, monster);
 
         }
         else if (input.equals("2")) {
             warrior = CharacterSelection.paladinCreate(name);
             System.out.println("You have chosen a " + warrior.getCharacterName() +" "+ warrior.getCharacterClass());
             monster = Monster.newMonsterInstance();
-            game.battleStart(playerOne, warrior, monster);
+            game.battleStart(playerOne, potion, warrior, monster);
 
         }
         else if (input.equals("3")) {

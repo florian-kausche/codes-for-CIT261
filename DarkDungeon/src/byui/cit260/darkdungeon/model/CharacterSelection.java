@@ -172,7 +172,22 @@ public class CharacterSelection implements Serializable {
         }
         return true;
     }
-    public void heal() {
+    public int heal(int amount, int heal) {
+        int numHealthPotions = amount;
+        int healthPotionHealAmount = heal;
+        if (numHealthPotions > 0) {
+            health = health + healthPotionHealAmount;
+            --numHealthPotions;
+            System.out.println(characterName+" drinks a healing potion.");
+            System.out.println(getStatus());
+            return numHealthPotions;
+        } else {
+            System.out.println("*  You've exhausted your potion supply!  *\n");
+            return amount;
+        }  
+        
+    }
+    /*public void heal(int amount) {
         int numHealthPotions = 3;
         int healthPotionHealAmount = 25;
         if (numHealthPotions > 0) {
@@ -180,10 +195,11 @@ public class CharacterSelection implements Serializable {
             --numHealthPotions;
             System.out.println(characterName+" drinks a healing potion.");
             System.out.println(getStatus());
+            
         } else {
             System.out.println("  You've exhausted your potion supply!");
-        }
-    }
+        }  
+    }*/
     public int attack() {
         return Game.rand(minAttackDamage, maxAttackDamage);
     }

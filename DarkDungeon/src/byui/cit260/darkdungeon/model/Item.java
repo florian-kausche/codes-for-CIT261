@@ -20,9 +20,8 @@ public class Item implements Serializable {
     public Item() {
     }
     
-    public Item(String itemDescription, String itemType,  int itemDamage, int itemHeal, int itemAmount) {
+    public Item(String itemDescription, int itemDamage, int itemHeal, int itemAmount) {
         this.itemDescription = itemDescription;
-        this.itemType = itemType;
         this.itemDamage = itemDamage;
         this.itemHeal = itemHeal;
         this.itemAmount = itemAmount;
