@@ -60,7 +60,7 @@ public class Battle implements Serializable {
         return "Battle{" + "isAlive=" + isAlive + '}';
     }
     
-    public void battleStart(Player player, CharacterSelection character, Monster monster) {  
+    public void battleStart(Player player, Item item, CharacterSelection character, Monster monster) {  
         Monster.newMonsterInstance();
         Scanner input = new Scanner(System.in);
         System.out.println(player.getName() + " has encountered a " + monster.getMonsterName()+ "\n");
@@ -71,7 +71,11 @@ public class Battle implements Serializable {
             System.out.print("Attack (a) \nHeal (h) \nRun (r) \n");
             String action = input.nextLine();
             if (action.equals("h")) {
-                character.heal();
+                //character.heal();
+                if (item.getItemAmount()>0){System.out.println("*  You have used a potion  *\n");System.out.println("  `  `  \\ \\(`^')/ /  '  '\n");}
+                int potionAmount = character.heal(item.getItemAmount(),item.getItemHeal());
+                item.setItemAmount(potionAmount);
+                System.out.println("*  You have " + item.getItemAmount() + " potions left.  *\n");
             } 
             else if (action.equals("a")) {
                 monster.defend(character);
