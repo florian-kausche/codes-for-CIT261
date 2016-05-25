@@ -5,15 +5,10 @@
  */
 package byui.cit260.darkdungeon.model;
 
-import com.sun.corba.se.impl.io.IIOPInputStream;
-import com.sun.net.httpserver.Authenticator;
-import java.io.IOException;
+
 import java.util.Random;
 import java.util.Scanner;
-import jdk.nashorn.internal.ir.BreakNode;
-import jdk.nashorn.internal.ir.ContinueNode;
-import jdk.nashorn.internal.objects.NativeRegExp;
-import jdk.nashorn.internal.parser.TokenType;
+
 /**
  *
  * @author gregg

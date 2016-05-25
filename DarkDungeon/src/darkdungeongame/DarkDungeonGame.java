@@ -2,11 +2,9 @@
  *  Dark Dungeon game
  */
 package darkdungeongame;
-import byui.cit260.darkdungeon.model.Monster;
+
 import byui.cit260.darkdungeon.model.*;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import byui.cit260.darkdungeon.control.*;
 
 /**
  * @authors Greg Kenar, William Murray, Florian Kausche
