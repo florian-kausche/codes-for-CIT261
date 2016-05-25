@@ -10,8 +10,9 @@ import java.util.Random;
 
 /**
  *
- * @author gregg
+ * @author Greg K, Bill M, Florian K
  */
+// Added by the team
 public class BattleControl {
     public static int attack(int min, int max, int defense, int health) {
         if (min > max) {return -1;}
@@ -31,7 +32,7 @@ public class BattleControl {
         }
     }
 
-    
+    //Added by Greg
     public static int random(int min, int max) {
         if (min > max) {return -1;}
         if ((min < 0 || min > 200) || (max < 0 || max > 200)) {return -1;}
@@ -39,14 +40,6 @@ public class BattleControl {
         int randomNum = rand.nextInt((max - min) + 1) + min;
         
         return randomNum;
-    }
-    public static int useHeal (int health, int itemAmount, int healAmount) {
-        if (health < 1 || health > 200) {return -1;}
-        if (itemAmount<=0) {return health;}
-        else if (health > (200-healAmount) || health > 200) {return health = 200;}
-        else { health += healAmount; 
-        return health;
-        }
         
         
     }

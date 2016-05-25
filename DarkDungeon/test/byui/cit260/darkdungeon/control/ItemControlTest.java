@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Bill
+ * @author Greg K, Bill M, Florian K
  */
 public class ItemControlTest {
     
@@ -18,7 +18,7 @@ public class ItemControlTest {
     }
 
     /**
-     * Test of useHeal method, of class ItemControl.
+     * Test of useHeal method, of class ItemControl. ~~~~ done by Bill
      */
     @Test
     public void testUseHeal() {

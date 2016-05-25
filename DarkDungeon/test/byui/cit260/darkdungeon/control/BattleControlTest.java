@@ -10,7 +10,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author gregg
+ * @author Greg K, Bill M, Florian K
  */
 public class BattleControlTest {
     
@@ -18,7 +18,7 @@ public class BattleControlTest {
     }
 
     /**
-     * Test of attack method, of class BattleControl.
+     * Test of attack method, of class BattleControl. ~~ Team Project
      */
     @Test
     public void testAttack() {
@@ -106,7 +106,7 @@ public class BattleControlTest {
     }
 
     /**
-     * Test of random method, of class BattleControl.
+     * Test of random method, of class BattleControl. ~~ Greg K
      */
     @Test
     public void testRandom() {

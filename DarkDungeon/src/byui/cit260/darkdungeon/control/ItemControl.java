@@ -7,8 +7,9 @@ package byui.cit260.darkdungeon.control;
 
 /**
  *
- * @author gregg
+ * @author Greg K, Bill M, Florian K
  */
+// Added by Bill M
 public class ItemControl {
     public static int useHeal (int health, int itemAmount, int healAmount) {
         if (health < 1 || health > 200) {return -1;}
