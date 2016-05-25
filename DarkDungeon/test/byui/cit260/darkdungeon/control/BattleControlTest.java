@@ -110,15 +110,73 @@ public class BattleControlTest {
      */
     @Test
     public void testRandom() {
+        /*******************************
+         * Test case #1
+         *******************************/
         System.out.println("random");
-        int min = 35;
-        int max = 35;
-        int expResult = 35;
+        System.out.println("\tTest case #1");
+        int min = 80;
+        int max = 80;
+        int expResult = 80;
         BattleControl test2 = new BattleControl();
         int result = test2.random(min, max);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
+         /*******************************
+         * Test case #2
+         *******************************/
+        System.out.println("\tTest case #2");
+        min = 250;
+        max = 250;
+        expResult = -1;
+        result = test2.random(min, max);
+        assertEquals(expResult, result);
+        /*******************************
+         * Test case #3
+         *******************************/
+        System.out.println("\tTest case #3");
+        min = -5;
+        max = -5;
+        expResult = -1;
+        result = test2.random(min, max);
+        assertEquals(expResult, result);
+        /*******************************
+         * Test case #4
+         *******************************/
+        System.out.println("\tTest case #4");
+        min = 20;
+        max = 10;
+        expResult = -1;
+        result = test2.random(min, max);
+        assertEquals(expResult, result);
+        /*******************************
+         * Test case #5
+         *******************************/
+        System.out.println("\tTest case #5");
+        min = 0;
+        max = 0;
+        expResult = 0;
+        result = test2.random(min, max);
+        assertEquals(expResult, result);
+        /*******************************
+         * Test case #6
+         *******************************/
+        System.out.println("\tTest case #6");
+        min = 200;
+        max = 200;
+        expResult = 200;
+        result = test2.random(min, max);
+        assertEquals(expResult, result);
+        /*******************************
+         * Test case #7
+         *******************************/
+        System.out.println("\tTest case #7");
+        min = 1;
+        max = 1;
+        expResult = 1;
+        result = test2.random(min, max);
+        assertEquals(expResult, result);
     }
     
 }

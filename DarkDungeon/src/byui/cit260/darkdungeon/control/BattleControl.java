@@ -31,10 +31,10 @@ public class BattleControl {
         }
     }
 
-    public BattleControl() {
-    }
     
     public static int random(int min, int max) {
+        if (min > max) {return -1;}
+        if ((min < 0 || min > 200) || (max < 0 || max > 200)) {return -1;}
         Random rand = new Random();
         int randomNum = rand.nextInt((max - min) + 1) + min;
         
