@@ -40,4 +40,14 @@ public class BattleControl {
         
         return randomNum;
     }
+    public static int useHeal (int health, int itemAmount, int healAmount) {
+        if (health < 1 || health > 200) {return -1;}
+        if (itemAmount<=0) {return health;}
+        else if (health > (200-healAmount) || health > 200) {return health = 200;}
+        else { health += healAmount; 
+        return health;
+        }
+        
+        
+    }
 }
