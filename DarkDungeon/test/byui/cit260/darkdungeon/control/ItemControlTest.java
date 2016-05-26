@@ -23,10 +23,10 @@ public class ItemControlTest {
     @Test
     public void testUseHeal() {
         System.out.println("useHeal");
-        System.out.println("Test Case 01");
         /*************************************************
          * TEST CASE # 01
          *************************************************/
+        System.out.println("\tTest Case 01");
         int health = 150;
         int itemAmount = 3;
         int healAmount = 30;
@@ -36,27 +36,27 @@ public class ItemControlTest {
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         // fail("The test case is a prototype.");
-        System.out.println("Test Case 02");
         /*************************************************
          * TEST CASE # 02
          *************************************************/
+        System.out.println("\tTest Case 02");
         health = 201;
         itemAmount = 3;
         healAmount = 30;
         expResult = -1; 
         result = heal.useHeal(health, itemAmount, healAmount);
         assertEquals(expResult, result);
-         System.out.println("Test Case 03");
         /*************************************************
          * TEST CASE # 03
          *************************************************/
+        System.out.println("\tTest Case 03");
         health = -05;
         itemAmount = 3;
         healAmount = 10;
         expResult = -1; 
         result = heal.useHeal(health, itemAmount, healAmount);
         assertEquals(expResult, result);
-         System.out.println("Test Case 04");
+         System.out.println("\tTest Case 04");
         /*************************************************
          * TEST CASE # 04
          *************************************************/
@@ -66,7 +66,7 @@ public class ItemControlTest {
         expResult = 150; 
         result = heal.useHeal(health, itemAmount, healAmount);
         assertEquals(expResult, result);
-         System.out.println("Test Case 05");
+         System.out.println("\tTest Case 05");
         /*************************************************
          * TEST CASE # 05
          *************************************************/
@@ -76,7 +76,7 @@ public class ItemControlTest {
         expResult = 11; 
         result = heal.useHeal(health, itemAmount, healAmount);
         assertEquals(expResult, result);
-         System.out.println("Test Case 06");
+         System.out.println("\tTest Case 06");
         /*************************************************
          * TEST CASE # 06
          *************************************************/
@@ -86,7 +86,7 @@ public class ItemControlTest {
         expResult = 200; 
         result = heal.useHeal(health, itemAmount, healAmount);
         assertEquals(expResult, result);
-         System.out.println("Test Case 07");
+         System.out.println("\tTest Case 07");
         /*************************************************
          * TEST CASE # 07
          *************************************************/
@@ -97,5 +97,6 @@ public class ItemControlTest {
         result = heal.useHeal(health, itemAmount, healAmount);
         assertEquals(expResult, result);
     }
+    
     
 }

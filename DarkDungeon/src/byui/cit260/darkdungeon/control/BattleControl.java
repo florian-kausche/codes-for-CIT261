@@ -40,7 +40,21 @@ public class BattleControl {
         int randomNum = rand.nextInt((max - min) + 1) + min;
         
         return randomNum;
-        
-        
+    }
+     //added by Greg
+    public static int superAttack(int health, int defense, int damageAmount) {
+        if (health < 1) {return -1;} 
+        if (damageAmount < 5 || damageAmount > 100) {return -1;}
+        if (damageAmount >= (health+defense)) { return 0;}
+        else if (damageAmount<defense) {return health;}
+        else {health -= (damageAmount-defense);}
+        return health;
+    }
+    public static boolean flee(int min, int max) {
+        if (min > max) {return Boolean.FALSE;}
+        if ((min < 0 || min > 10) || (max < 0 || max > 10)) {return Boolean.FALSE;}
+        int value = random(min, max);
+        if (value>= 3) {return Boolean.TRUE;}
+        else {return Boolean.TRUE;}
     }
 }

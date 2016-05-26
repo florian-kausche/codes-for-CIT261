@@ -178,5 +178,85 @@ public class BattleControlTest {
         result = test2.random(min, max);
         assertEquals(expResult, result);
     }
+    /**
+     * Test of random method, of class BattleControl. ~~ Greg K
+     */
+    @Test
+    public void testAbility() {
+        /*******************************
+         * Test case #1
+         *******************************/
+        System.out.println("ability");
+        System.out.println("\tTest case #1");
+        int health = 100;
+        int damage = 20;
+        int defense = 5;
+        int expResult = 85;
+        BattleControl test3 = new BattleControl();
+        int result = test3.superAttack(health, defense, damage);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
+         /*******************************
+         * Test case #2
+         *******************************/
+        System.out.println("\tTest case #2");
+        health = -5;
+        damage = 30;
+        defense = 0;
+        expResult = -1;
+        result = test3.superAttack(health, defense, damage);
+        assertEquals(expResult, result);
+         /*******************************
+         * Test case #3
+         *******************************/
+        System.out.println("\tTest case #3");
+        health = 100;
+        damage = 1;
+        defense = 1;
+        expResult = -1;
+        result = test3.superAttack(health, defense, damage);
+        assertEquals(expResult, result);
+         /*******************************
+         * Test case #4
+         *******************************/
+        System.out.println("\tTest case #4");
+        health = 10;
+        damage = 50;
+        defense = 5;
+        expResult = 0;
+        result = test3.superAttack(health, defense, damage);
+        assertEquals(expResult, result);
+         /*******************************
+         * Test case #5
+         *******************************/
+        System.out.println("\tTest case #5");
+        health = 200;
+        damage = 100;
+        defense = 10;
+        expResult = 110;
+        result = test3.superAttack(health, defense, damage);
+        assertEquals(expResult, result);
+         /*******************************
+         * Test case #6
+         *******************************/
+        System.out.println("\tTest case #6");
+        health = 200;
+        damage = 10;
+        defense = 10;
+        expResult = 200;
+        result = test3.superAttack(health, defense, damage);
+        assertEquals(expResult, result);
+         /*******************************
+         * Test case #7
+         *******************************/
+        System.out.println("\tTest case #7");
+        health = 100;
+        damage = 100;
+        defense = 0;
+        expResult = 0;
+        result = test3.superAttack(health, defense, damage);
+        assertEquals(expResult, result);
+    }
     
 }

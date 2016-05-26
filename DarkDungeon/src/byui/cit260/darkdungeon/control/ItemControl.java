@@ -5,6 +5,8 @@
  */
 package byui.cit260.darkdungeon.control;
 
+import jdk.internal.dynalink.DefaultBootstrapper;
+
 /**
  *
  * @author Greg K, Bill M, Florian K
@@ -18,8 +20,7 @@ public class ItemControl {
         else { health += healAmount; 
         return health;
         }
-        
-        
     }
+   
     
 }
